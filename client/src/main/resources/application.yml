@@ -1,0 +1,17 @@
+#配置中心地址
+spring:
+  application:
+    name: client
+#注册中心地址
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:1111/eureka/
+#监控端口
+management:
+  port: 18080
+#应用端口
+server:
+  port: 8899
+
+

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="client" />
+        <module name="server" />
+        <module name="common" />
+        <module name="gateway" />
+        <module name="register" />
+      </profile>
+      <profile name="Annotation profile for cloudParent" enabled="true">
+        <sourceOutputDir name="../../target/generated-sources/annotations" />
+        <sourceTestOutputDir name="../../target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="config" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="client" target="1.8" />
+      <module name="cloudParent" target="1.8" />
+      <module name="common" target="1.8" />
+      <module name="config" target="1.8" />
+      <module name="config (1)" target="1.8" />
+      <module name="gateway" target="1.8" />
+      <module name="register" target="1.8" />
+      <module name="server" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="client" options="-parameters" />
+      <module name="common" options="-parameters" />
+      <module name="config" options="-parameters" />
+      <module name="config (1)" options="-parameters" />
+      <module name="gateway" options="-parameters" />
+      <module name="register" options="-parameters" />
+      <module name="server" options="-parameters" />
+    </option>
+  </component>
+</project>
