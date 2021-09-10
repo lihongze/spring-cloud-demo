@@ -2,6 +2,9 @@ package com.cloud.server.collection;
 
 import com.cloud.common.CommonResult;
 import com.cloud.transport.RestTransport;
+import com.cloud.utils.ResponseUtils;
+import com.netflix.hystrix.contrib.javanica.annotation.HystrixCommand;
+import com.netflix.ribbon.proxy.annotation.Hystrix;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -21,4 +24,10 @@ public class TestController {
     public CommonResult<?> hello() {
         return restTransport.getFrom("http://client/hello");
     }
+
+    @GetMapping(value = "hystrix")
+    public CommonResult<?> hystrixTest() {
+        return restTransport.getFrom("http://client/hello");
+    }
+
 }

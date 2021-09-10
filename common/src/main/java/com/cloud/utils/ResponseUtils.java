@@ -20,7 +20,7 @@ public class ResponseUtils {
     }
 
     public static <T> CommonResult<T> fail(String message) {
-        return new CommonResult<T>().setCode(ResponseCode.FAIL).setMsg(SUCCESS);
+        return new CommonResult<T>().setCode(ResponseCode.FAIL).setMsg(message);
     }
 
     public static <T> CommonResult<T> makeRsp(int code, String msg) {

@@ -2,6 +2,14 @@
 spring:
   application:
     name: client
+  cloud:
+    config:
+      name: client
+      profile: default
+      discovery:
+        enabled: true
+        service-id: config
+
 #注册中心地址
 eureka:
   client:

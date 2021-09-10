@@ -1,7 +1,5 @@
-package com.cloud.server.collection;
+package com.cloud.gateway.controller;
 
-import com.cloud.common.CommonResult;
-import com.cloud.utils.ResponseUtils;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -17,7 +15,7 @@ public class TestController {
     private String configTest;
 
     @GetMapping(value = "hello")
-    public CommonResult<String> hello() {
-        return ResponseUtils.ok(configTest);
+    public String hello() {
+        return configTest;
     }
 }

@@ -9,14 +9,9 @@
         <module name="client" />
         <module name="server" />
         <module name="common" />
+        <module name="config" />
         <module name="gateway" />
         <module name="register" />
-      </profile>
-      <profile name="Annotation profile for cloudParent" enabled="true">
-        <sourceOutputDir name="../../target/generated-sources/annotations" />
-        <sourceTestOutputDir name="../../target/generated-test-sources/test-annotations" />
-        <outputRelativeToContentRoot value="true" />
-        <module name="config" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>

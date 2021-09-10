@@ -3,7 +3,11 @@ spring:
   cloud:
     config:
       label: gateway
+      name: gateway
+      profile: default
       discovery:
+        enabled: true
+        service-id: config
         locator:
           enabled: true
           lowerCaseServiceId: true
@@ -28,6 +32,6 @@ eureka:
     service-url:
       defaultZone: http://localhost:1111/eureka/
 #应用端口
-server:
-  port: 8888
+#server:
+#  port: 8888
 ip-address: 127.0.0.1
