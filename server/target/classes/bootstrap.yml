@@ -1,0 +1,24 @@
+#配置中心地址
+spring:
+  application:
+    name: server
+  cloud:
+    config:
+      name: server
+      profile: default
+      discovery:
+        enabled: true
+        service-id: config
+#注册中心地址
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:1111/eureka/
+#监控端口
+management:
+  port: 18080
+#应用端口
+server:
+  port: 8889
+
+
