@@ -30,4 +30,8 @@ public class ResponseUtils {
     public static <T> CommonResult<T> makeRsp(int code, String msg, T data) {
         return new CommonResult<T>().setCode(code).setMsg(msg).setData(data);
     }
+
+    public static <T> CommonResult<T> makeRsp(ResponseCode responseCode) {
+        return new CommonResult<T>().setCode(responseCode.code).setMsg(responseCode.description);
+    }
 }
